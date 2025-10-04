@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云游上中 | 首页</title>
+    <meta name="description" content="云游上中——多页面网站：图片背景、交互式画廊、文本/全景/视频子页">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">云游上中</h1>
+        <nav class="site-nav" aria-label="主导航">
+          <ul>
+            <li><a href="index.html" aria-current="page">首页</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="home-hero" aria-labelledby="project-title">
+        <h2 id="project-title" class="project-title">云游上中</h2>
+        <p class="project-intro" id="project-intro">（在此输入项目的简要介绍文本……）</p>
+      </section>
+
+      <section aria-labelledby="map-entry-heading">
+        <div class="section-header">
+          <h2 id="map-entry-heading">导览入口</h2>
+        </div>
+        <div class="entry-grid entry-grid--wide">
+          <a class="entry-card" href="map.html" aria-label="云游上中导览图">
+            <div class="entry-media">
+              <img src="592f7240-4e9c-4fb3-8b51-455eb0c208c0.jpg" alt="云游上中导览图">
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">云游上中导览图</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> 云游上中</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

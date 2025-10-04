@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云游上中 | 导览图</title>
+    <meta name="description" content="云游上中导览子页面，包含10个次级页面入口。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body style="--page-bg: url('592f7240-4e9c-4fb3-8b51-455eb0c208c0.webp')">
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header site-header--map">
+      <div class="container">
+        <h1 class="site-title">云游上中</h1>
+        <nav class="site-nav" aria-label="主导航">
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="map.html" aria-current="page">导览图</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <div class="map-canvas">
+        <img src="592f7240-4e9c-4fb3-8b51-455eb0c208c0.jpg" >
+
+        <a class="map-hotspot entry-card" href="leaf-01.html" aria-label="甄陶楼" style="top: 29%; left: 83%;">
+          <div class="entry-media"><img src="assets/map/node1.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">甄陶楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-02.html" aria-label="龙门楼" style="top: 64%; left: 69.5%;">
+          <div class="entry-media"><img src="assets/map/node2.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">龙门楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-03.html" aria-label="工程楼" style="top: 45%; left: 81%;">
+          <div class="entry-media"><img src="assets/map/node3.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">工程楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-04.html" aria-label="逸夫楼" style="top: 70%; left: 85%; z-index: 20;">
+          <div class="entry-media"><img src="assets/map/node4.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">逸夫楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-05.html" aria-label="中兴楼" style="top: 75%; left: 58%;">
+          <div class="entry-media"><img src="assets/map/node5.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">中兴楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-06.html" aria-label="总务楼" style="top: 48%; left: 58.5%; z-index: 20;">
+          <div class="entry-media"><img src="assets/map/node6.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">总务楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-07.html" aria-label="红楼" style="top: 61%; left: 82%;">
+          <div class="entry-media"><img src="assets/map/node7.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">红楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-08.html" aria-label="大礼堂" style="top: 46%; left: 69%;">
+          <div class="entry-media"><img src="assets/map/node8.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">大礼堂</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-09.html" aria-label="念慈楼" style="top: 56%; left: 51%;">
+          <div class="entry-media"><img src="assets/map/node9.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">念慈楼</h3></div>
+        </a>
+
+        <a class="map-hotspot entry-card" href="leaf-10.html" aria-label="先棉堂及辅楼" style="top: 82%; left: 78%;">
+          <div class="entry-media"><img src="assets/map/node10.jpg" alt=""></div>
+          <div class="entry-body"><h3 class="entry-title">先棉堂及辅楼</h3></div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> 云游上中</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

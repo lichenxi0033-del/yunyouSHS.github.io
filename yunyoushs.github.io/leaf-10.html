@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云游上中 | 先棉堂及辅楼</title>
+    <meta name="description" content="云游上中次级页面，包含文字、视频与全景展示区。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/pannellum@2.5.6/build/pannellum.css">
+  </head>
+  <body style="--page-bg: url('assets/leaf/10/bg.jpg')">
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">云游上中</h1>
+        <nav class="site-nav" aria-label="主导航">
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="map.html">导览图</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <div class="museum-layout">
+        <section class="museum-hero">
+          <img src="assets/leaf/10/hero.jpg" alt="">
+          <div class="museum-hero-content">
+            <h2>先棉堂及辅楼</h2>
+            <p>先棉堂及辅楼是学校重要的教学建筑群，承载着深厚的教育传统，是学校历史发展的重要见证。</p>
+          </div>
+        </section>
+
+        <aside class="museum-sidebar">
+          <nav aria-label="页面导航">
+            <ul class="museum-nav">
+              <li><a href="#intro" class="active">建筑介绍</a></li>
+              <li><a href="#video" >影像资料</a></li>
+              <li><a href="#panorama">全景浏览</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="museum-content">
+          <section id="intro" class="museum-section" aria-labelledby="intro-title">
+            <h3 id="intro-title">建筑介绍</h3>
+            <p>先棉堂及辅楼是学校历史悠久的建筑群，由主楼先棉堂和配套的辅楼组成。建筑群体现了学校深厚的文化底蕴和教育传统。</p>
+            <p>先棉堂作为主楼，建筑庄重大气，内部设有教室、办公室等功能区域。辅楼则提供额外的教学和办公空间，与主楼形成有机的整体。</p>
+            <p>整个建筑群见证了学校的发展历程，承载着无数学子的求学记忆，是学校文化传承的重要载体。</p>
+          </section>
+
+          <section id="video" class="museum-section" aria-labelledby="video-title">
+            <h3 id="video-title">影像资料</h3>
+            <p>通过珍贵的影像资料，了解先棉堂及辅楼的历史变迁和现状。</p>
+            <div class="museum-media ratio-box">
+              <video controls poster="assets/leaf/10/video-cover.jpg">
+                <source src="assets/leaf/10/video.mp4" type="video/mp4">
+                <track kind="captions" src="assets/leaf/10/captions.vtt" srclang="zh" label="中文字幕">
+                您的浏览器不支持视频播放。
+              </video>
+            </div>
+          </section>
+
+          <section id="panorama" class="museum-section" aria-labelledby="panorama-title">
+            <h3 id="panorama-title">全景浏览</h3>
+            <p>360° 沉浸式体验先棉堂及辅楼的建筑风貌，感受历史与现代的交融。点击箭头或缩略图切换不同视角。</p>
+            <div class="museum-media">
+              <div class="panorama-carousel">
+                <div class="panorama-viewer" id="panorama-viewer">
+                  <!-- 动态创建的全景容器将在这里 -->
+                </div>
+                <button class="panorama-nav prev" aria-label="上一张全景">‹</button>
+                <button class="panorama-nav next" aria-label="下一张全景">›</button>
+                <div class="panorama-title" id="panorama-title-text">先棉堂及辅楼 - 主楼外观</div>
+                <div class="panorama-indicators" id="panorama-indicators"></div>
+              </div>
+              <div class="panorama-thumbnails" id="panorama-thumbnails"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> 云游上中</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/pannellum@2.5.6/build/pannellum.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // 全景图片数据（使用确实可用的测试图片）
+      const panoramaData = [
+        {
+          id: 'pano-01',
+          image: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          title: '先棉堂及辅楼 - 主楼外观',
+          thumbnail: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          hfov: 100,
+          pitch: 0,
+          yaw: 180
+        },
+        {
+          id: 'pano-02',
+          image: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          title: '先棉堂及辅楼 - 内部大厅',
+          thumbnail: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          hfov: 100,
+          pitch: -10,
+          yaw: 0
+        },
+        {
+          id: 'pano-03',
+          image: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          title: '先棉堂及辅楼 - 走廊视角',
+          thumbnail: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          hfov: 100,
+          pitch: 0,
+          yaw: 90
+        },
+        {
+          id: 'pano-04',
+          image: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          title: '先棉堂及辅楼 - 庭院景观',
+          thumbnail: 'https://images.unsplash.com/photo-1630682682997-4c76476b0d58?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          hfov: 100,
+          pitch: 10,
+          yaw: 270
+        }
+      ];
+
+      // 全景轮播管理器
+      class PanoramaCarousel {
+        constructor() {
+          this.currentIndex = 0;
+          this.viewer = null;
+          this.viewerContainer = document.getElementById('panorama-viewer');
+          this.titleElement = document.getElementById('panorama-title-text');
+          this.indicatorsContainer = document.getElementById('panorama-indicators');
+          this.thumbnailsContainer = document.getElementById('panorama-thumbnails');
+          this.prevBtn = document.querySelector('.panorama-nav.prev');
+          this.nextBtn = document.querySelector('.panorama-nav.next');
+          
+          this.init();
+        }
+
+        init() {
+          this.createIndicators();
+          this.createThumbnails();
+          this.bindEvents();
+          this.loadPanorama(0);
+        }
+
+        createIndicators() {
+          panoramaData.forEach((_, index) => {
+            const indicator = document.createElement('button');
+            indicator.className = 'panorama-indicator';
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => this.goToSlide(index));
+            this.indicatorsContainer.appendChild(indicator);
+          });
+        }
+
+        createThumbnails() {
+          panoramaData.forEach((data, index) => {
+            const thumb = document.createElement('div');
+            thumb.className = 'panorama-thumb';
+            if (index === 0) thumb.classList.add('active');
+            thumb.innerHTML = `<img src="${data.thumbnail}" alt="${data.title}">`;
+            thumb.addEventListener('click', () => this.goToSlide(index));
+            this.thumbnailsContainer.appendChild(thumb);
+          });
+        }
+
+        bindEvents() {
+          this.prevBtn.addEventListener('click', () => this.previousSlide());
+          this.nextBtn.addEventListener('click', () => this.nextSlide());
+          
+          // 键盘导航
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') this.previousSlide();
+            if (e.key === 'ArrowRight') this.nextSlide();
+          });
+        }
+
+        loadPanorama(index) {
+          const data = panoramaData[index];
+          
+          // 完全销毁现有查看器
+          if (this.viewer) {
+            try {
+              this.viewer.destroy();
+            } catch (e) {
+              console.log('Viewer already destroyed');
+            }
+            this.viewer = null;
+          }
+
+          // 清空容器内容
+          this.viewerContainer.innerHTML = '';
+
+          // 创建新的容器元素
+          const containerId = `pano-container-${index}`;
+          const container = document.createElement('div');
+          container.id = containerId;
+          container.style.width = '100%';
+          container.style.height = '100%';
+          this.viewerContainer.appendChild(container);
+
+          // 延迟创建新查看器，确保DOM更新完成
+          setTimeout(() => {
+            try {
+              this.viewer = pannellum.viewer(containerId, {
+                type: 'equirectangular',
+                panorama: data.image,
+                autoLoad: true,
+                hfov: data.hfov,
+                pitch: data.pitch,
+                yaw: data.yaw,
+                backgroundColor: [0, 0, 0],
+                showControls: true,
+                showFullscreenCtrl: true,
+                showZoomCtrl: true,
+                showCompass: false,
+                draggable: true,
+                keyboardZoom: true,
+                mouseZoom: true,
+                doubleClickZoom: true,
+                onLoad: () => {
+                  console.log('Panorama loaded successfully');
+                },
+                onError: (error) => {
+                  console.error('Panorama load error:', error);
+                }
+              });
+            } catch (error) {
+              console.error('Failed to create viewer:', error);
+            }
+          }, 100);
+        }
+
+        goToSlide(index) {
+          if (index === this.currentIndex) return;
+          
+          this.currentIndex = index;
+          this.updateUI();
+          this.loadPanorama(index);
+        }
+
+        nextSlide() {
+          const nextIndex = (this.currentIndex + 1) % panoramaData.length;
+          this.goToSlide(nextIndex);
+        }
+
+        previousSlide() {
+          const prevIndex = this.currentIndex === 0 ? panoramaData.length - 1 : this.currentIndex - 1;
+          this.goToSlide(prevIndex);
+        }
+
+        updateUI() {
+          const data = panoramaData[this.currentIndex];
+          
+          // 更新标题
+          this.titleElement.textContent = data.title;
+          
+          // 更新指示器
+          document.querySelectorAll('.panorama-indicator').forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === this.currentIndex);
+          });
+          
+          // 更新缩略图
+          document.querySelectorAll('.panorama-thumb').forEach((thumb, index) => {
+            thumb.classList.toggle('active', index === this.currentIndex);
+          });
+          
+          // 更新按钮状态
+          this.prevBtn.disabled = false;
+          this.nextBtn.disabled = false;
+        }
+      }
+
+      // 初始化全景轮播
+      const panoramaCarousel = new PanoramaCarousel();
+
+      // 博物馆导航交互
+      const navLinks = document.querySelectorAll('.museum-nav a');
+      const sections = document.querySelectorAll('.museum-section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // 更新导航状态
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // 滚动时更新导航高亮
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 150;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+  </html>
