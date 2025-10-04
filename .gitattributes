@@ -1,2 +1,7 @@
-# Auto detect text files and perform LF normalization
+cd "D:\liche\Documents\云游上中——test1"
+git init
+git add .
+git commit -m "Initial commit: gitattributes"
+git remote add origin https://github.com/lichenxi0033-del/yunyouSHS.github.io
+git push -u origin main
 * text=auto
